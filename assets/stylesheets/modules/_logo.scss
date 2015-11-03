@@ -1,0 +1,17 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - logo module
+// styles for the logo module
+
+.logo {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo__text {
+  fill: #fff;
+  font-family: anonymous('regular');
+  font-size: 1px;
+  letter-spacing: 0.1px;
+  line-height: 2;
+}
