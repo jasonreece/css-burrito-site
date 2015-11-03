@@ -1,0 +1,16 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ site.baseurl }}/assets/js/scripts.min.js"></script>
+  </body>
+</html>
