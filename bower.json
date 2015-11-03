@@ -1,0 +1,21 @@
+{
+  "name": "css-burrito",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "jasonreece <jason.reece@mac.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha"
+  }
+}
