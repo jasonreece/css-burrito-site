@@ -1,0 +1,35 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - nav module
+// styles for the nav module
+
+.nav {
+  background-color: $brand-color;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  padding: 25px 0;
+
+  a,
+  a:visited {
+    color: #fff;
+  }
+}
+
+.nav__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.nav__list--center {
+  justify-content: center;
+}

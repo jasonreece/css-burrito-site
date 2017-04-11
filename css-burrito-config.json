@@ -2,16 +2,15 @@
   "settings": {
     "root": {
       "pathToSassDirectory": "assets/",
-      "sassDirectory": "stylesheets",
+      "sassDirectory": "styles",
       "sassImportFile": "application.scss"
     },
     "modules": {
       "modulesDirectory": "modules",
       "modulesImportFile": "_modules.scss",
       "moduleFiles": [
-        "_btns.scss",
-        "_forms.scss",
-        "_logo.scss"
+        "_logo.scss",
+        "_nav.scss"
       ]
     }
   },

@@ -4,36 +4,37 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "browserify": {
-    "transform": [
-      "debowerify"
-    ]
+    "start": "jekyll serve --limit_posts 10 --watch & gulp"
   },
   "author": "",
   "license": "ISC",
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": [
+      "./assets/styles/libs/**/*.scss",
+      "!./assets/styles/libs/_library-variable-overrides.scss"
+    ],
+    "rules": {
+      "max-empty-lines": 2,
+      "selector-pseudo-element-colon-notation": null,
+      "media-feature-no-missing-punctuation": null,
+      "declaration-empty-line-before": null
+    }
+  },
   "devDependencies": {
-    "autoprefixer": "^6.0.0",
-    "browser-sync": "2.6.5",
-    "browserify": "^11.1.0",
-    "debowerify": "^1.3.1",
-    "gulp": "3.9.0",
-    "gulp-autoprefixer": "2.1.0",
-    "gulp-cache": "^0.3.0",
-    "gulp-concat": "2.5.2",
-    "gulp-hologram": "^1.2.0",
-    "gulp-imagemin": "2.2.1",
-    "gulp-jshint": "^1.11.2",
-    "gulp-minify-css": "^1.2.1",
+    "autoprefixer": "^6.3.7",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
     "gulp-notify": "^2.2.0",
-    "gulp-plumber": "1.0.0",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "1.2.0",
-    "jshint-stylish": "^2.0.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-w3cjs": "^1.3.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^6.0.0"
   }
 }

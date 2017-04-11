@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<section class="bg-primary p-y-lg">
-  <div class="container p-t">
+<section class="s-bg-primary">
+  <div class="l-container">
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg version="1.1" class="logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -11,21 +11,34 @@ layout: default
     <text class="logo__text" transform="matrix(1 0 0 1 -7.629395e-05 0.8443)"><tspan x="0" y="0">////////////////////////////////////////////////////////////</tspan><tspan x="0" y="1">////////////////////////////////////////////////////////////</tspan><tspan x="0" y="2">//////////////////////////////////........./////////////////</tspan><tspan x="0" y="3">///////////////////////////////.....mmmmm....///////////////</tspan><tspan x="0" y="4">/////////////////////////////.....mmmmmmmmmm.../////////////</tspan><tspan x="0" y="5">//////////////////////////.....mmmmmmmmmmmmmmmm...//////////</tspan><tspan x="0" y="6">////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////</tspan><tspan x="0" y="7">//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////</tspan><tspan x="0" y="8">////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////</tspan><tspan x="0" y="9">///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////</tspan><tspan x="0" y="10">/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////</tspan><tspan x="0" y="11">///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////</tspan><tspan x="0" y="12">////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////</tspan><tspan x="0" y="13">/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////</tspan><tspan x="0" y="14">///////....mmmmmmmmm css-burrito mmmmmmmmm...///////////////</tspan><tspan x="0" y="15">//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////</tspan><tspan x="0" y="16">//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////</tspan><tspan x="0" y="17">//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////</tspan><tspan x="0" y="18">////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////</tspan><tspan x="0" y="19">/////////.....mmmmmmm....mmmmmmm....////////////////////////</tspan><tspan x="0" y="20">///////////....mmmmmmm....mmmm....//////////////////////////</tspan><tspan x="0" y="21">/////////////....mmmmmm...mm....////////////////////////////</tspan><tspan x="0" y="22">///////////////....mmmmm......//////////////////////////////</tspan><tspan x="0" y="23">/////////////////........../////////////////////////////////</tspan><tspan x="0" y="24">/////////////////////....///////////////////////////////////</tspan><tspan x="0" y="25">////////////////////////////////////////////////////////////</tspan><tspan x="0" y="26">////////////////////////////////////////////////////////////</tspan></text>
     </svg>
     <h1>css-burrito</h1>
-    <h2>a customizable Sass template and generator</h2>
-    <h3><pre class="p-t p-x-0"><code>npm install -g css-burrito</code></pre></h3>
+    <h2>An architectural Sass template that will:</h2>
+    <ul>
+      <li>keep your styles organized</li>
+      <li>create and @import new modules for you.</li>
+      <li>remove modules that are no longer needed and un-@import them.</li>
+      <li>list all modules files, just in case you need a quick peek..</li>
+    </ul>
   </div>
 </section>
 
-<section id="starter-template">
-  <div class="container p-y-lg">
-    <h2 class="display-1">Starter Template</h2>
-    <p>css-burrito is a <a class="t-underline" href="https://smacss.com/">SMACSS</a> based starter template for your Sass projects.</p>
-    <p>Add css-burrito to your project by running:
-      <pre class="s-bg-gray-lighter"><code>burrito -n [folder-name] [file-name] [path-to-sass-directory]</code></pre>
+<section id="install">
+  <div class="l-container">
+    <h2>Quick Install</h2>
+    <p>Clone the <a href="https://www.github.com/jasonreece/css-burrito" target="_blank">Repo</a> or install with <a href="https://www.npmjs.com/package/css-burrito" target="_blank">npm</a>.</p>
+    <pre><code>npm install -g css-burrito</code></pre>
+  </div>
+</section>
+
+<section id="new" class="s-bg-primary">
+  <div class="l-container">
+    <h2>New Template</h2>
+    <p>In the command line, navigate to the root of your project and run:
+      <pre><code>burrito -n</code></pre>
     </p>
-    <p>If none of the optional arguments are passed in, the folder name will be <em>stylesheets</em>, the file name will be <em>application.scss</em>, and the path will be the current directory.</p>
-    <p>The default template structure looks like this:
-      <pre class="s-bg-gray-lighter"><code>stylesheets/
+    <p>This creates a new instance of css-burrito in the root of your project.</p>
+    <p>The file structure looks like this:
+      <pre><code>styles/
+  index.scss
   global/
     _settings.scss
     _utilities.scss
@@ -35,46 +48,83 @@ layout: default
     _typography.scss
 
   libs/
-    _library-variable-overrides.scss
-    _normalize.scss
+    _libs-variable-overrides.scss
 
   modules/
     _modules.scss
+</code></pre>
+    </p>
 
-  application.scss</code></pre>
+    <p>If you'd like to change where the template is installed, or rename any of the main files, you can do this in a <code>.cssburritorc</code> or <code>.cssburritorc.json</code> file.</p>
+
+    <p>Or you can create a burrito object inside of <code>package.json</code>.</p>
+
+    <pre><code>// in .cssburritorc
+{
+  pathToStyles: 'path/to/burrito',
+  stylesDirectoryName: 'custom-styles-directory-name',
+  stylesFileName: 'custom-styles-file-name.scss',
+  modulesDirectoryName: 'custom-modules-directory-name',
+  modulesImportFileName: 'custom-modules-import-file-name.scss',
+}</code></pre>
+
+    <p>or</p>
+
+    <pre><code>// in package.json
+"burrito": {
+pathToStyles: 'path/to/burrito',
+stylesDirectoryName: 'custom-styles-directory-name',
+stylesFileName: 'custom-styles-file-name.scss',
+modulesDirectoryName: 'custom-modules-directory-name',
+modulesImportFileName: 'custom-modules-import-file-name.scss',
+}</code></pre>
+  </div>
+</section>
+
+<section id="add">
+  <div class="l-container">
+    <h2>Adding new Modules</h2>
+    <p>css-burrito will add new modules files, and @import them into the project for you!</p>
+    <p>To use this feature run:
+      <pre><code>burrito -m (fileName[s])</code></pre>
     </p>
   </div>
 </section>
 
-<section id="generate" class="bg-primary">
-  <div class="container p-y-lg">
-    <h2 class="display-1">Generate</h2>
-    <p>Tired of manually adding module files into your project?</p>
-    <p>Add new module files to your project by running:
-      <pre class="s-bg-gray-lighter"><code>burrito -m (fileName[s])</code></pre>
-    </p>
-
-    <p>Remove module files to your project by running:
-      <pre class="s-bg-gray-lighter"><code>burrito -r (fileName[s])</code></pre>
-    </p>
-
-    <p>List your module files by running:
-      <pre class="s-bg-gray-lighter"><code>burrito -l</code></pre>
+<section id="remove" class="s-bg-primary">
+  <div class="l-container">
+    <h2>Removing Modules</h2>
+    <p>css-burrito will also delete unnecessary modules files, and remove the @import from the project for you!</p>
+    <p>To use this feature run:
+      <pre><code>burrito -r (fileName[s])</code></pre>
     </p>
   </div>
 </section>
 
-<section id="customize">
-  <div class="container p-y-lg">
-    <h2 class="display-1">Customize</h2>
-    <p>Want to use the generator to add module files, without being stuck with our template?  That's cool, you'll just need to set up your config.</p>
-
-    <p>Just add your file structure to a <a class="t-underline" href="{{ site.baseurl }}/assets/downloads/css-burrito-config.json.zip">css-burrito-config</a> file, and run:
-      <pre class="s-bg-gray-lighter"><code>burrito -g</code></pre>
+<section id="list">
+  <div class="l-container">
+    <h2>List the Files in the Modules Directory</h2>
+    <p>css-burrito will list your module files for you.</p>
+    <p>To use this feature run:
+      <pre><code>burrito -l</code></pre>
     </p>
+  </div>
+</section>
 
-     <p>Now you can generate new module files to your project by running:
-      <pre class="s-bg-gray-lighter"><code>burrito -m (fileName[s])</code></pre>
+<section id="help" class="s-bg-primary">
+  <div class="l-container">
+    <h2>Need Help?</h2>
+    <p>It's always there for you.
+      <pre><code>burrito -h</code></pre>
     </p>
+  </div>
+</section>
+
+<section id="ingredients">
+  <div class="l-container">
+    <div class="ingredients">
+      {% capture ingredients %}{% include ingredients.md %}{% endcapture %}
+      {{ ingredients | markdownify }}
+    </div>
   </div>
 </section>

@@ -1,2 +1,2 @@
 var gulp = require('gulp');
-gulp.task('default', ['watch-css', 'watch-js']);
+gulp.task('default', ['watch-css']);
