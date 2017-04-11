@@ -1,16 +1,6 @@
-var tasks = [
-  'browser-sync',
-  'browser-sync-reload',
-  'default',
-  'images',
-  'jekyll-build',
-  'jekyll-rebuild',
-  'scripts',
-  'styles',
-  'hologram',
-  'watch'
-];
-
+var fs = require('fs');
+// export the list of task files in the gulp directory
+var tasks = fs.readdirSync('./gulp/tasks');
 tasks.forEach(function(task) {
-  exports.task = require('./tasks/' + task + '.js');
+  exports.task = require('./tasks/' + task);
 });
